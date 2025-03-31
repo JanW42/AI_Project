@@ -129,7 +129,7 @@ Create a file named `config.py` and add following environment variables (example
 from dataclasses import dataclass
 
 @dataclass
-class Settings:
+class config:
    # Azure OpenAI
    AZURE_OPENAI_API_KEY="your_azure_openai_api_key"
    AZURE_OPENAI_ENDPOINT="https://your-azure-endpoint.openai.azure.com/"
