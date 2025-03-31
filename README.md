@@ -23,7 +23,7 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 
 ## Features
 
-- **AI Voice Assistent**: An Ai with emotional german voice to complete tasks and access to gpt4o API.
+- **AI Voice Assistent**: An AI with emotional german voice to complete tasks and access to gpt4o API.
 - **Local PDF Retriever**: Uses chunk-based embedding retrieval to provide context for your questions.
 - **Azure OpenAI Integration**: Generates answers using GPT models hosted on Azure OpenAI.
 - **OpenWeather API**: Retrieves up-to-date weather information for a given location.
@@ -125,14 +125,18 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 
 Create a file named `config.py` and add following environment variables (example structure):
 
-```dotenv
-# Azure OpenAI
-AZURE_OPENAI_API_KEY=your_azure_openai_api_key
-AZURE_OPENAI_ENDPOINT=https://your-azure-endpoint.openai.azure.com/
-OPENAI_API_VERSION=2023-06-15-preview
+```python
+from dataclasses import dataclass
 
-# OpenWeather
-WEATHER_API_KEY=your_openweather_api_key
+@dataclass
+class Settings:
+   # Azure OpenAI
+   AZURE_OPENAI_API_KEY="your_azure_openai_api_key"
+   AZURE_OPENAI_ENDPOINT="https://your-azure-endpoint.openai.azure.com/"
+   OPENAI_API_VERSION="2023-06-15-preview"
+
+   # OpenWeather
+   WEATHER_API_KEY="your_openweather_api_key"
 ```
 
 Make sure **config.py** is referenced in your `.gitignore` so that it is not pushed to GitHub, keeping your keys safe.
