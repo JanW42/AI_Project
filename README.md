@@ -71,28 +71,28 @@ Achtung Readme ist im Rohbau!!!! Nur für Formatierung/Syntax Übernommen.
 
 ## Installation
 0. **Configuriere git**
-   Installiere GitLens Extansion (Ctrl+Shift+X) - Tippe ein "GitLens"
-   Schließe geöffnete Dateien oder Ordner/Folder in VS Code (Ctrl+K F)
-   Erstelle einen leeren Ordner am Speicherort deiner Wahl
-   Öffne diesen Ordner (Ctrl+K Ctrl+O)
-   Gehe auf das Git Versionsverwaltung (Ctrl+Shift+G)
-   Gehe auf Clone Repo
-   Login into GitHub
+   1. Installiere GitLens Extansion (Ctrl+Shift+X) - Tippe ein "GitLens"
+   2. Schließe geöffnete Dateien oder Ordner/Folder in VS Code (Ctrl+K F)
+   3. Erstelle einen leeren Ordner am Speicherort deiner Wahl
+   4. Öffne diesen Ordner (Ctrl+K Ctrl+O)
+   5. Gehe auf das Git Versionsverwaltung (Ctrl+Shift+G)
+   6. Gehe auf Clone Repo
+   7. Login into GitHub
 
    ```bash
    git --global user.name "Dein Name für Commits"
    git --global user.email "Deine Email für Commits"
    ```
 
-   Tippe eine commit Nachricht oben ein (diese wird in GitHub angezeigt)
-   Drücke auf Changes [+] um alle Changes in Stages zu packen
-   Drücke auf [Sync Changes 1]
+   9. Tippe eine commit Nachricht oben ein (diese wird in GitHub angezeigt)
+   10. Drücke auf Changes [+] um alle Changes in Stages zu packen
+   11. Drücke auf [Sync Changes 1]
    
-   Fertig - Code wurde erfolgreich auf GitHub gepusht
+   - Fertig - Code wurde erfolgreich auf GitHub gepusht
 
 1. **Clone this repository**:
-   Under Windows go there you want the new Folder with the Code and there:
-   Press (Shift+right Mouse) -> open Powershell Window here
+   - Under Windows go there you want the new Folder with the Code and there:
+   - Press (Shift+right Mouse) -> open Powershell Window here
 
     ```bash
     git clone https://github.com/JanW42/AI_Project.git
@@ -100,8 +100,8 @@ Achtung Readme ist im Rohbau!!!! Nur für Formatierung/Syntax Übernommen.
     ```
 
 2. **Create and activate a virtual environment (optional but recommended)**:
-   Open your new AI_Project Folder with VSCode
-   Open a new Terminal with (Ctrl+Shift+ö)
+   1. Open your new AI_Project Folder with VSCode
+   2. Open a new Terminal with (Ctrl+Shift+ö)
 
     ```bash
     python -m venv ai         # "ai" is the Name of the virtual Environment
@@ -109,10 +109,10 @@ Achtung Readme ist im Rohbau!!!! Nur für Formatierung/Syntax Übernommen.
     ai\Scripts\activate.bat   # for Windows using cmd
     ai\Scripts\activate.ps1   # for Windows using PowerShell
     ```
-   Now the VE is active, you see it as it is at the beginning at the code line and
-   at the bottom right is now (venv | ai) python v. ...
+   4. Now the VE is active, you see it as it is at the beginning at the code line and
+   5. at the bottom right is now (venv | ai) python v. ...
 3. **Install required dependencies**:
-   Also now in the same terminal
+   - Also now in the same terminal
 
     ```bash
     pip install -r requirements.txt
