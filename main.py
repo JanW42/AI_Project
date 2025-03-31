@@ -5,6 +5,8 @@ import asyncio
 import time
 import os
 from playsound import playsound
+from speech_to_text import Speech_to_Text_Parser
+from audio_recorder import record_and_save
 
 text = "Hallo mein Name ist Lucy. Ich bin eine künstliche Intelligenz. Wie kann ich dir helfen?"
 filename  = "output.mp3"
@@ -15,7 +17,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 for root, dirs, files in os.walk(dir_path):
     for file in files:
-        if file.endswith('.mp3'):
+        if file.endswith('output.mp3'):
             print (root+'/'+str(file))
             os.remove(filename)
 
@@ -74,17 +76,24 @@ asyncio.run(text_to_mp3(text, filename, voice, rate))
 time.sleep(1)
 try:
     playsound(filename)
+
+
+
     os.remove(filename)
 except Exception as e:
     print (e)
 
 while True:
     try:
-        Frage = input("Hallo, stelle mir eine Frage. Ctrl+C zum Beenden. ")
-        result = create_message(Frage)  #Rufe die Funktion auf und übergebe die "Frage" zu ChatGpt
-        print(result) #Gebe die Antwort in der Commandozeile aus.
+        #Version 1 nur Commandozeile nächste Zeile
+        #Frage = input("Hallo, stelle mir eine Frage. Ctrl+C zum Beenden. ")
+        record_and_save() #Hier wird die Funktion record and save aufgerufen um die Mikrosprache solange auszunehmen bis man aufhört zu reden. Dann wird es in der Input.wav Datei gespeichert.
+        text = Speech_to_Text_Parser() #Hier wird die Sprache aus input.mp3 in Text verarbeitet mit der extrem Leistungsstarken lokalen CUDA anwendung von OpenAI / Nvidia
+        result = create_message(text)  #Rufe die Funktion auf und übergebe die "Frage" zu ChatGpt API
+        #Alte Version nur mit Commandozeile. Die nächsten beiden Zeilen.
+        #result = create_message(Frage)  #Rufe die Funktion auf und übergebe die "Frage" zu ChatGpt API
+        #print(result) #Gebe die Antwort in der Commandozeile aus.
         asyncio.run(text_to_mp3(result, filename, voice, rate))
-        time.sleep(1)
         try:
             playsound(filename)
             os.remove(filename)

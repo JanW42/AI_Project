@@ -113,7 +113,7 @@ Achtung Readme ist im Rohbau!!!! Nur für Formatierung/Syntax Übernommen.
     ai\Scripts\activate.ps1   # for Windows using PowerShell
     ```
    - Now the VE is active, you see it as it is at the beginning at the code line and
-   - at the bottom right is now (venv | ai) python v. ...
+   - at the bottom right is now {} Python 3.10.5('VE':venv)
 3. **Install required dependencies**:
    - Also now in the same terminal
 
