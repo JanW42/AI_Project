@@ -44,13 +44,11 @@ def speech_to_text_processer():
     return segment.text
 
 def Speech_to_Text_Parser():
-    set_cuda_paths()
-    print("Cuda Core Path wurde erfolgreich gesetzt")
     try:
         text = speech_to_text_processer()
-        print("Erfolgreich")
+        #print("Speech_to_text_processer_successfully")
     except Exception as e:
-        print ("Nicht Erfolgreiches Sprache zu Text")
+        #print ("Nicht Erfolgreiches Sprache zu Text")
         pass
     return text 
 

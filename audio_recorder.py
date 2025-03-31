@@ -2,11 +2,16 @@ import speech_recognition as sr
 #from pydub import AudioSegment
 #from pydub.playback import play
 
-def record_and_save():
+def get_ambient_noise():
     recognizer = sr.Recognizer()
     with sr.Microphone(device_index=1) as source:
+        recognizer.adjust_for_ambient_noise(source, duration=2)
+        print ("Hintergrundrauschen wurde erfasst")
+
+def record_and_save():
+    recognizer = sr.Recognizer()
+    with sr.Microphone(device_index=1) as source: #device_index ist die Audio Input Interface Nummer an dem Gerät an dem das Mirko angeschlossen. Kann 0 - n sein. Die Funktion in testaudioindex.py findet es heraus. Zahl eintragen wo das Hauptmikro hat.
         print("Sprich jetzt... (zum Beenden einfach aufhören zu sprechen)")
-        recognizer.adjust_for_ambient_noise(source)
         audio = recognizer.listen(source, phrase_time_limit=60)
     
     # Speichere als WAV-Datei (da pydub MP3 nicht direkt unterstützt)
