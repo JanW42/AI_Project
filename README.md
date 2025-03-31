@@ -79,6 +79,7 @@ Achtung Readme ist im Rohbau!!!! Nur für Formatierung/Syntax Übernommen.
    - Gehe auf Clone Repo
    - Login into GitHub
 
+
    ```bash
    git --global user.name "Dein Name für Commits"
    git --global user.email "Deine Email für Commits"
@@ -94,6 +95,7 @@ Achtung Readme ist im Rohbau!!!! Nur für Formatierung/Syntax Übernommen.
    - Under Windows go there you want the new Folder with the Code and there:
    - Press (Shift+right Mouse) -> open Powershell Window here
 
+
     ```bash
     git clone https://github.com/JanW42/AI_Project.git
     cd AI_Project
@@ -102,6 +104,7 @@ Achtung Readme ist im Rohbau!!!! Nur für Formatierung/Syntax Übernommen.
 2. **Create and activate a virtual environment (optional but recommended)**:
    - Open your new AI_Project Folder with VSCode
    - Open a new Terminal with (Ctrl+Shift+ö)
+
 
     ```bash
     python -m venv ai         # "ai" is the Name of the virtual Environment
