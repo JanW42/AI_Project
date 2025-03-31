@@ -2,7 +2,7 @@
 
 Own AI assistant. Project at Dr. Rasch in EM Prescriptive Analytics and Artificial Intelligence
 
-Achtung Readme ist im Rohbau!!!!
+Achtung Readme ist im Rohbau!!!! Nur für Formatierung/Syntax Übernommen.
 
 ## Structure
 - [Overview](#overview)
@@ -70,21 +70,50 @@ Achtung Readme ist im Rohbau!!!!
    - Not tracked by Git for security (make sure your `.gitignore` is set correctly).
 
 ## Installation
+0. **Configuriere git**
+   Installiere GitLens Extansion (Ctrl+Shift+X) - Tippe ein "GitLens"
+   Schließe geöffnete Dateien oder Ordner/Folder in VS Code (Ctrl+K F)
+   Erstelle einen leeren Ordner am Speicherort deiner Wahl
+   Öffne diesen Ordner (Ctrl+K Ctrl+O)
+   Gehe auf das Git Versionsverwaltung (Ctrl+Shift+G)
+   Gehe auf Clone Repo
+   Login into GitHub
+
+   ```bash
+   git --global user.name "Dein Name für Commits"
+   git --global user.email "Deine Email für Commits"
+   ```
+
+   Tippe eine commit Nachricht oben ein (diese wird in GitHub angezeigt)
+   Drücke auf Changes [+] um alle Changes in Stages zu packen
+   Drücke auf [Sync Changes 1]
+   
+   Fertig - Code wurde erfolgreich auf GitHub gepusht
 
 1. **Clone this repository**:
+   Under Windows go there you want the new Folder with the Code and there:
+   Press (Shift+right Mouse) -> open Powershell Window here
+
     ```bash
-    git clone https://github.com/YourUsername/MyTravelAI.git
+    git clone https://github.com/JanW42/AI_Project.git
     cd AI_Project
     ```
 
 2. **Create and activate a virtual environment (optional but recommended)**:
-    ```bash
-    python -m venv ai
-    source ai/bin/activate    # macOS / Linux
-    ai\Scripts\activate       # Windows    # Flasch hier muss .bat usw.
-    ```
+   Open your new AI_Project Folder with VSCode
+   Open a new Terminal with (Ctrl+Shift+ö)
 
+    ```bash
+    python -m venv ai         # "ai" is the Name of the virtual Environment
+    source ai/bin/activate    # for macOS / Linux
+    ai\Scripts\activate.bat   # for Windows using cmd
+    ai\Scripts\activate.ps1   # for Windows using PowerShell
+    ```
+   Now the VE is active, you see it as it is at the beginning at the code line and
+   at the bottom right is now (venv | ai) python v. ...
 3. **Install required dependencies**:
+   Also now in the same terminal
+
     ```bash
     pip install -r requirements.txt
     ```
