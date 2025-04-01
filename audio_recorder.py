@@ -2,6 +2,8 @@ import speech_recognition as sr
 #from pydub import AudioSegment
 #from pydub.playback import play
 
+#pip install SpeechRecognition
+
 def get_ambient_noise():
     recognizer = sr.Recognizer()
     with sr.Microphone(device_index=1) as source:

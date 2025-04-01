@@ -2,10 +2,10 @@ import os
 import re
 import time
 import asyncio
-import edge_tts
+import edge_tts #pip install edge_tts
 from config import config
-from openai import AzureOpenAI
-from playsound import playsound
+from openai import AzureOpenAI #pip install openai
+from playsound import playsound #pip install playsound==1.2.2
 from audio_recorder import record_and_save, get_ambient_noise
 from speech_to_text import Speech_to_Text_Parser, set_cuda_paths
 
@@ -83,12 +83,11 @@ def create_message(prompt):
     return response_without_asterisks
 
 asyncio.run(text_to_mp3(text, filename, voice, rate))
-time.sleep(1)
 try:
     playsound(filename)
     os.remove(filename)
 except Exception as e:
-    print (e)
+    pass
 
 set_cuda_paths ()# Setzte einmal den CUDA Pfad
 get_ambient_noise()# Erfasse Hintergrundrauschen
@@ -103,6 +102,6 @@ while True:
             playsound(filename)
             os.remove(filename)
         except Exception as e:
-            print (e)
+            pass
     except Exception as e:
-        print (e)
+        pass
