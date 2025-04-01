@@ -1,3 +1,5 @@
+![CI](https://pypi-camo.freetls.fastly.net/186d79cdee29d06b107a999e2d8c8611121e160f/68747470733a2f2f6769746875622e636f6d2f5359535452414e2f6661737465722d776869737065722f776f726b666c6f77732f43492f62616467652e737667)
+
 # AI_Project
 
 AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and Artificial Intelligence
@@ -15,7 +17,7 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 
 ## Overview
 
-**AI_Project** is a chatbot-like application designed to answer questions:
+**AI_Project** is a AI Voice assistent designed to answer questions:
 1. It retrieves relevant chunks of text from local PDF documents.
 2. It calls Azure OpenAI to generate context-aware responses.
 3. It fetches real-time weather information via the OpenWeather API.
@@ -50,15 +52,16 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 3. **speech_to_text.py**  
 
 4. **testaudioindex.py**  
-   - A text file containing placeholders (like `{input_text}`, `{kontext}`, and `{weather}`) to create a final prompt.
 
 5. **config.py**  
    - A file that contains environment variables such as API keys and endpoints.  
    - Not tracked by Git for security (make sure your `.gitignore` is set correctly).
 
 ## Installation
-1. **Configuriere git**:
-   - Installiere Python v.3.10.5 www.python.org
+1. **Get started**:
+   > [!IMPORTANT]
+   > Installiere Python v.3.10.5 www.python.org
+    
    ```bash
    python.exe -m pip install --upgrade pip
    py --list
@@ -94,7 +97,8 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 
 2. **Clone this repository**:
    - Under Windows go there you want the new Folder with the Code and there:
-   - Press (Shift+right Mouse) -> open Powershell Window here
+   > [!TIP]
+   > Press (Shift+right Mouse) -> open Powershell Window here
 
 
     ```bash
@@ -103,9 +107,9 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
     ```
 
 3. **Create and activate a virtual environment (optional but recommended)**:
-   - Open your new AI_Project Folder with VSCode
-   - Open a new Terminal with (Ctrl+Shift+ö)
-
+   > [!TIP]
+   > Open your new AI_Project Folder with VSCode
+   > Open a new Terminal with (Ctrl+Shift+ö)
 
     ```bash
     python -3.10 -m venv VE         # "VE" is the Name of the virtual Environment
@@ -113,15 +117,38 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
     VE\Scripts\activate.bat   # for Windows using cmd
     VE\Scripts\activate.ps1   # for Windows using PowerShell
     ```
-   - Now the VE is active, you see it as it is at the beginning at the code line and
-   - at the bottom right is now {} Python 3.10.5('VE':venv)
+
+   > [!TIP]
+   > Now the VE is active, you see it as it is at the beginning at the code line and
+   > at the bottom right is now {} Python 3.10.5('VE':venv)
+
 4. **Install required dependencies**:
-   - Also now in the same terminal
+   > [!NOTE]
+   > Also now in the same terminal
 
     ```bash
     pip install -r requirements.txt
     ```
 
+   > [!TIP]
+   > Install manually if import library name is still underlined in yellow.
+   > Ctrl+Shift+P “Reload Window” before.
+
+   ```bash
+   pip install time
+   pip install edge_tts
+   pip install openai
+   pip install playsound==1.2.2
+   pip install SpeechRecognition
+   pip install faster-whisper
+   pip install pyaudio
+   pip install torch==2.6.0
+   pip install torchaudio==2.6.0
+   pip install nvidia-cudnn-cu12==9.5.0.50
+   pip install nvidia-cuda-nvrtc-cu12==12.4.127
+   pip install nvidia-cuda-runtime-cu12==12.4.127
+   pip install nvidia-cublas-cu12==12.4.5.8
+   ```
 5. **Set up your environment variables** in `config.txt` (see [Configuration](#configuration)).
 
 ## Usage
@@ -136,8 +163,8 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
    - Say your question. Wait 1 Seconds before talking to let the skricpt get all Data.  
 
 ## Configuration
-
-Create a file named `config.py` and add following environment variables (example structure):
+> [!IMPORTANT]
+> Create a file named `config.py` and add following environment variables (example structure):
 
 ```python
 from dataclasses import dataclass
@@ -153,7 +180,13 @@ class config:
    WEATHER_API_KEY="your_openweather_api_key"
 ```
 
-Make sure **config.py** is referenced in your `.gitignore` so that it is not pushed to GitHub, keeping your keys safe.
+> [!CAUTION]
+> Make sure **config.py** is referenced in your `.gitignore` so that it is not pushed to GitHub, keeping your keys safe.
+
+```txt
+config.py
+config.txt
+```
 
 ## How It Works
 
@@ -164,10 +197,10 @@ Feel free to check the [issues page](../../issues) to see if your idea or bug re
 
 ## Acknowledgments
 
-- **speech_recognition**: For providing a fast smart way to save audioinput into .wav files.  
-- **faster_whisper**:  For providing extremely powerful local language models that run on CUDA Nvidia GPU and this work almost in real time.
-- **Azure OpenAI**: For hosting GPT models.  
-- **OpenWeather**: For real-time weather data.  
-- **You**: For trying out this tool!
+[speech_recognition](https://github.com/Uberi/speech_recognition): For providing a fast smart way to save audioinput into .wav files.  
+[faster_whisper](https://github.com/OpenNMT/CTranslate2/): For providing extremely powerful local language models that run on CUDA Nvidia GPU and this work almost in real time.
+[AzureOpenAI](https://github.com/openai/openai-python/tree/main): For hosting GPT models.  
+[OpenWeather](https://github.com/openweathermap): For real-time weather data.  
+**You**: For trying out this tool!
 
 ---
