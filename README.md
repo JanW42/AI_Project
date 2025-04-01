@@ -39,7 +39,7 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 ├── speech_to_text.py     # The script that provides all language functions for text conversion. Built on faster_whisper. An extremely powerful stt CUDA GPU usage
 ├── testaudioindex.py     # A test script to find out the audio interface index to start real-time voice input
 ├── requirements.txt      # Python dependencies
-├── config.py             # Holds environment variables (not tracked by Git)
+├── config.py             # Holds environment variables (.gitignore)
 └── README.md             # Documentation (this file)
 ```
 
@@ -61,8 +61,8 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 ## Installation
 **1. Get started**:
 > [!IMPORTANT]
-> Installiere Python v.3.10.5 www.python.org
-    
+> Install Python v.3.10.5 find here www.python.org
+
 ```bash
 python.exe -m pip install --upgrade pip
 py --list
@@ -76,11 +76,11 @@ pip install --upgrade setuptools wheel
 pip install playsound
 ```
 
-Install GitLens Extansion (Ctrl+Shift+X) - Type in “GitLens”. 
-After this open files or folders in VS Code (Ctrl+K F). 
+Install GitLens Extansion (Ctrl+Shift+X)de - Type in “GitLens”. 
+After this open files or folders in VS Code (Ctrl+K F)de. 
 Create an empty folder in the location of your choice. 
-Open this folder (Ctrl+K Ctrl+O). 
-Go to the Git version management (Ctrl+Shift+G). 
+Open this folder (Ctrl+K Ctrl+O)de. 
+Go to the Git version management (Ctrl+Shift+G)de. 
 Go to Clone Repo. 
 Finally login into GitHub. 
 
@@ -98,8 +98,7 @@ Done :rocket: Code has been successfully pushed to GitHub
 
 **2. Clone this repository**:
 > [!TIP]
-> Press (Shift+right Mouse) -> open Powershell Window here.
-> Under Windows go there you want the new Folder with the Code and there:
+> Press (Shift+right Mouse) here you want the Folder -> open Powershell Window here.
 
 ```bash
 git clone https://github.com/JanW42/AI_Project.git
@@ -108,11 +107,11 @@ cd AI_Project
 
 **3. Create and activate a virtual environment (optional but recommended)**:
 > [!TIP]
-> Open your new AI_Project Folder with VSCode.
-> Open a new Terminal with (Ctrl+Shift+ö).
+> Open the AI_Project Folder with VSCode.
+> Open a new Terminal with (Ctrl+Shift+ö)de.
 
 ```bash
-python -3.10 -m venv VE         # "VE" is the Name of the virtual Environment
+python -3.10 -m venv VE   #"VE" is the name of the virtual Environment
 source ai/bin/activate    # for macOS / Linux
 VE\Scripts\activate.bat   # for Windows using cmd
 VE\Scripts\activate.ps1   # for Windows using PowerShell
@@ -151,14 +150,14 @@ pip install nvidia-cublas-cu12==12.4.5.8
 ## Usage
 
 1. **Prepare your PDFs:**  
-Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
+-Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
 
 2. **Run the application:**
-Start normal with the play button or in terminal 'main.py'
+-Start normal with the play button or in terminal 'main.py'
    
 3. **Interact:**
-Wait till Lucy talks.  
-Say your question
+-Wait till Lucy talks.  
+-Say your question
 
 ## Configuration
 > [!IMPORTANT]
@@ -200,10 +199,10 @@ Feel free to check the [issues page](../../issues) to see if your idea or bug re
 
 ## Acknowledgments
 
-[Speech_recognition](https://github.com/Uberi/speech_recognition) for providing a fast smart way to save audioinput into .wav files.  
-[faster_whisper](https://github.com/OpenNMT/CTranslate2/) for providing extremely powerful local speech to text.
-[AzureOpenAI](https://github.com/openai/openai-python/tree/main) for hosting GPT models.  
-[OpenWeather](https://github.com/openweathermap) for real-time weather data.  
-**You** for trying out this tool!
+-[Speech_recognition](https://github.com/Uberi/speech_recognition) for providing a fast smart way to save audioinput into .wav files.  
+-[faster_whisper](https://github.com/OpenNMT/CTranslate2/) for providing extremely powerful local speech to text.
+-[AzureOpenAI](https://github.com/openai/openai-python/tree/main) for hosting GPT models.  
+-[OpenWeather](https://github.com/openweathermap) for real-time weather data.  
+-**You** for trying out this tool!
 
 ---
