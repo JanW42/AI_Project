@@ -54,11 +54,12 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 **4. testaudioindex.py**  
 
 **5. config.py**  
-A file that contains environment variables such as API keys and endpoints.  
-Not tracked by Git for security (make sure your `.gitignore` is set correctly).
+> [!CAUTION]
+> A file that contains environment variables such as API keys and endpoints.  
+> Not tracked by Git for security (make sure your `.gitignore` is set correctly).
 
 ## Installation
-1. **Get started**:
+**1. Get started**:
 > [!IMPORTANT]
 > Installiere Python v.3.10.5 www.python.org
     
@@ -95,9 +96,9 @@ Finally [Sync Changes 1].
    
 Done :rocket: Code has been successfully pushed to GitHub
 
-2. **Clone this repository**:
+**2. Clone this repository**:
 > [!TIP]
-> Press (Shift+right Mouse) -> open Powershell Window here
+> Press (Shift+right Mouse) -> open Powershell Window here.
 > Under Windows go there you want the new Folder with the Code and there:
 
 ```bash
@@ -105,10 +106,10 @@ git clone https://github.com/JanW42/AI_Project.git
 cd AI_Project
 ```
 
-3. **Create and activate a virtual environment (optional but recommended)**:
+**3. Create and activate a virtual environment (optional but recommended)**:
 > [!TIP]
-> Open your new AI_Project Folder with VSCode
-> Open a new Terminal with (Ctrl+Shift+ö)
+> Open your new AI_Project Folder with VSCode.
+> Open a new Terminal with (Ctrl+Shift+ö).
 
 ```bash
 python -3.10 -m venv VE         # "VE" is the Name of the virtual Environment
@@ -121,10 +122,7 @@ VE\Scripts\activate.ps1   # for Windows using PowerShell
 > Now the VE is active, you see it as it is at the beginning at the code line and
 > at the bottom right is now {} Python 3.10.5('VE':venv)
 
-4. **Install required dependencies**:
-> [!NOTE]
-> Also now in the same terminal
-
+**4. Install required dependencies**:
 ```bash
 pip install -r requirements.txt
 ```
@@ -156,11 +154,11 @@ pip install nvidia-cublas-cu12==12.4.5.8
 Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
 
 2. **Run the application:**
-Start normal with the play button or in terminal main.py
+Start normal with the play button or in terminal 'main.py'
    
 3. **Interact:**
 Wait till Lucy talks.  
-Say your question. Wait 1 Seconds before talking to let the skricpt get all Data.  
+Say your question
 
 ## Configuration
 > [!IMPORTANT]
@@ -181,12 +179,16 @@ class config:
 ```
 
 > [!CAUTION]
-> Make sure **config.py** is referenced in your `.gitignore` so that it is not pushed to GitHub, keeping your keys safe.
+> Make sure **config.py** is referenced in your `.gitignore` so that it is not pushed to GitHub, keeping your keys safe. Your .gitignore should look like this.
 
-```txt
+```python
 ##Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 config.py
 config.txt
+VE/
+*.log
+*.wav
+*.mp3
 ```
 
 ## How It Works
@@ -199,7 +201,7 @@ Feel free to check the [issues page](../../issues) to see if your idea or bug re
 ## Acknowledgments
 
 [Speech_recognition](https://github.com/Uberi/speech_recognition) for providing a fast smart way to save audioinput into .wav files.  
-[faster_whisper](https://github.com/OpenNMT/CTranslate2/) for providing extremely powerful local language models.
+[faster_whisper](https://github.com/OpenNMT/CTranslate2/) for providing extremely powerful local speech to text.
 [AzureOpenAI](https://github.com/openai/openai-python/tree/main) for hosting GPT models.  
 [OpenWeather](https://github.com/openweathermap) for real-time weather data.  
 **You** for trying out this tool!
