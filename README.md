@@ -45,121 +45,122 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 
 ### File Details
 
-1. **main.py**  
+**1. main.py**  
   
-2. **audio_recorder.py**  
+**2. audio_recorder.py**  
 
-3. **speech_to_text.py**  
+**3. speech_to_text.py**  
 
-4. **testaudioindex.py**  
+**4. testaudioindex.py**  
 
-5. **config.py**  
-   - A file that contains environment variables such as API keys and endpoints.  
-   - Not tracked by Git for security (make sure your `.gitignore` is set correctly).
+**5. config.py**  
+A file that contains environment variables such as API keys and endpoints.  
+Not tracked by Git for security (make sure your `.gitignore` is set correctly).
 
 ## Installation
 1. **Get started**:
-   > [!IMPORTANT]
-   > Installiere Python v.3.10.5 www.python.org
+> [!IMPORTANT]
+> Installiere Python v.3.10.5 www.python.org
     
-   ```bash
-   python.exe -m pip install --upgrade pip
-   py --list
-   ```
-   check Python Versions installt here should now be -V : 3.10 now
+```bash
+python.exe -m pip install --upgrade pip
+py --list
+```
+Check Python Versions installt here should now be -V : 3.10 now.
  
 
-   If there are errors when installing playsound
-   ```bash
-   pip install --upgrade setuptools wheel
-   pip install playsound
-   ```
+If there are errors when installing playsound
+```bash
+pip install --upgrade setuptools wheel
+pip install playsound
+```
 
-   Install GitLens Extansion (Ctrl+Shift+X) - Type in “GitLens”
-   Close open files or folders/folders in VS Code (Ctrl+K F)
-   Create an empty folder in the location of your choice
-   Open this folder (Ctrl+K Ctrl+O)
-   Go to the Git version management (Ctrl+Shift+G)
-   Go to Clone Repo
-   Login into GitHub
+Install GitLens Extansion (Ctrl+Shift+X) - Type in “GitLens”. 
+After this open files or folders in VS Code (Ctrl+K F). 
+Create an empty folder in the location of your choice. 
+Open this folder (Ctrl+K Ctrl+O). 
+Go to the Git version management (Ctrl+Shift+G). 
+Go to Clone Repo. 
+Finally login into GitHub. 
 
-   **Add necessary settings**
-   ```bash
-   git --global user.name "Your name for commits"
-   git --global user.email "Your E-Mail for commits"
-   ```
-   **Final steps to graphic commit**
-   Type a commit message above (this will be displayed in GitHub)
-   Press Changes [+] to pack all changes into stages
-   Press [Sync Changes 1]
+**Add necessary settings**
+```bash
+git --global user.name "Your name for commits"
+git --global user.email "Your E-Mail for commits"
+```
+**Final steps to graphic commit**
+Type a commit message above (this will be displayed in GitHub).
+The press Changes [+] to pack all changes into stages.
+Finally [Sync Changes 1].
    
-   Done :rocket: Code has been successfully pushed to GitHub
+Done :rocket: Code has been successfully pushed to GitHub
 
 2. **Clone this repository**:
-   > [!TIP]
-   > Press (Shift+right Mouse) -> open Powershell Window here
-   > Under Windows go there you want the new Folder with the Code and there:
+> [!TIP]
+> Press (Shift+right Mouse) -> open Powershell Window here
+> Under Windows go there you want the new Folder with the Code and there:
 
-    ```bash
-    git clone https://github.com/JanW42/AI_Project.git
-    cd AI_Project
-    ```
+```bash
+git clone https://github.com/JanW42/AI_Project.git
+cd AI_Project
+```
 
 3. **Create and activate a virtual environment (optional but recommended)**:
-   > [!TIP]
-   > Open your new AI_Project Folder with VSCode
-   > Open a new Terminal with (Ctrl+Shift+ö)
+> [!TIP]
+> Open your new AI_Project Folder with VSCode
+> Open a new Terminal with (Ctrl+Shift+ö)
 
-    ```bash
-    python -3.10 -m venv VE         # "VE" is the Name of the virtual Environment
-    source ai/bin/activate    # for macOS / Linux
-    VE\Scripts\activate.bat   # for Windows using cmd
-    VE\Scripts\activate.ps1   # for Windows using PowerShell
-    ```
+```bash
+python -3.10 -m venv VE         # "VE" is the Name of the virtual Environment
+source ai/bin/activate    # for macOS / Linux
+VE\Scripts\activate.bat   # for Windows using cmd
+VE\Scripts\activate.ps1   # for Windows using PowerShell
+```
 
-   > [!TIP]
-   > Now the VE is active, you see it as it is at the beginning at the code line and
-   > at the bottom right is now {} Python 3.10.5('VE':venv)
+> [!TIP]
+> Now the VE is active, you see it as it is at the beginning at the code line and
+> at the bottom right is now {} Python 3.10.5('VE':venv)
 
 4. **Install required dependencies**:
-   > [!NOTE]
-   > Also now in the same terminal
+> [!NOTE]
+> Also now in the same terminal
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
-   > [!TIP]
-   > Install manually if import library name is still underlined in yellow.
-   > Ctrl+Shift+P “Reload Window” before.
+> [!TIP]
+> Install manually if import library name is still underlined in yellow.
+> Ctrl+Shift+P “Reload Window” before.
 
-   ```bash
-   pip install time
-   pip install edge_tts
-   pip install openai
-   pip install playsound==1.2.2
-   pip install SpeechRecognition
-   pip install faster-whisper
-   pip install pyaudio
-   pip install torch==2.6.0
-   pip install torchaudio==2.6.0
-   pip install nvidia-cudnn-cu12==9.5.0.50
-   pip install nvidia-cuda-nvrtc-cu12==12.4.127
-   pip install nvidia-cuda-runtime-cu12==12.4.127
-   pip install nvidia-cublas-cu12==12.4.5.8
-   ```
+```bash
+pip install time
+pip install edge_tts
+pip install openai
+pip install playsound==1.2.2
+pip install SpeechRecognition
+pip install faster-whisper
+pip install pyaudio
+pip install torch==2.6.0
+pip install torchaudio==2.6.0
+pip install nvidia-cudnn-cu12==9.5.0.50
+pip install nvidia-cuda-nvrtc-cu12==12.4.127
+pip install nvidia-cuda-runtime-cu12==12.4.127
+pip install nvidia-cublas-cu12==12.4.5.8
+```
 5. **Set up your environment variables** in `config.txt` (see [Configuration](#configuration)).
 
 ## Usage
 
-1. **Prepare your PDFs**:  
-   Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
+1. **Prepare your PDFs:**  
+Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
 
-2. **Run the application**:
+2. **Run the application:**
+Start normal with the play button or in terminal main.py
    
-3. **Interact**:  
-   Wait till Lucy talks.  
-   Say your question. Wait 1 Seconds before talking to let the skricpt get all Data.  
+3. **Interact:**
+Wait till Lucy talks.  
+Say your question. Wait 1 Seconds before talking to let the skricpt get all Data.  
 
 ## Configuration
 > [!IMPORTANT]
@@ -183,7 +184,7 @@ class config:
 > Make sure **config.py** is referenced in your `.gitignore` so that it is not pushed to GitHub, keeping your keys safe.
 
 ```txt
-## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+##Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 config.py
 config.txt
 ```
@@ -197,10 +198,10 @@ Feel free to check the [issues page](../../issues) to see if your idea or bug re
 
 ## Acknowledgments
 
-[speech_recognition](https://github.com/Uberi/speech_recognition): For providing a fast smart way to save audioinput into .wav files.  
-[faster_whisper](https://github.com/OpenNMT/CTranslate2/): For providing extremely powerful local language models that run on CUDA Nvidia GPU and this work almost in real time.
-[AzureOpenAI](https://github.com/openai/openai-python/tree/main): For hosting GPT models.  
-[OpenWeather](https://github.com/openweathermap): For real-time weather data.  
-**You**: For trying out this tool!
+[Speech_recognition](https://github.com/Uberi/speech_recognition) for providing a fast smart way to save audioinput into .wav files.  
+[faster_whisper](https://github.com/OpenNMT/CTranslate2/) for providing extremely powerful local language models.
+[AzureOpenAI](https://github.com/openai/openai-python/tree/main) for hosting GPT models.  
+[OpenWeather](https://github.com/openweathermap) for real-time weather data.  
+**You** for trying out this tool!
 
 ---
