@@ -1,4 +1,4 @@
-![CI](https://pypi-camo.freetls.fastly.net/186d79cdee29d06b107a999e2d8c8611121e160f/68747470733a2f2f6769746875622e636f6d2f5359535452414e2f6661737465722d776869737065722f776f726b666c6f77732f43492f62616467652e737667)
+![CI](https://pypi-camo.freetls.fastly.net/186d79cdee29d06b107a999e2d8c8611121e160f/68747470733a2f2f6769746875622e636f6d2f5359535452414e2f6661737465722d776869737065722f776f726b666c6f77732f43492f62616467652e737667)![Status](https://pypi-camo.freetls.fastly.net/5d2da640fa2fb42f1cab6f8bf77084d0e539d17f/68747470733a2f2f696d672e736869656c64732e696f2f707970692f7374617475732f5370656563685265636f676e6974696f6e2e737667)
 
 # AI_Project
 
@@ -66,40 +66,39 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
    python.exe -m pip install --upgrade pip
    py --list
    ```
-   - check Python Versions installt here should now be -V : 3.10 now
+   check Python Versions installt here should now be -V : 3.10 now
  
 
-   - Wenn es fehler beim Installieren von playsound gibt
+   If there are errors when installing playsound
    ```bash
    pip install --upgrade setuptools wheel
    pip install playsound
    ```
 
-   - Installiere GitLens Extansion (Ctrl+Shift+X) - Tippe ein "GitLens"
-   - Schließe geöffnete Dateien oder Ordner/Folder in VS Code (Ctrl+K F)
-   - Erstelle einen leeren Ordner am Speicherort deiner Wahl
-   - Öffne diesen Ordner (Ctrl+K Ctrl+O)
-   - Gehe auf das Git Versionsverwaltung (Ctrl+Shift+G)
-   - Gehe auf Clone Repo
-   - Login into GitHub
+   Install GitLens Extansion (Ctrl+Shift+X) - Type in “GitLens”
+   Close open files or folders/folders in VS Code (Ctrl+K F)
+   Create an empty folder in the location of your choice
+   Open this folder (Ctrl+K Ctrl+O)
+   Go to the Git version management (Ctrl+Shift+G)
+   Go to Clone Repo
+   Login into GitHub
 
    **Add necessary settings**
    ```bash
-   git --global user.name "Dein Name für Commits"
-   git --global user.email "Deine Email für Commits"
+   git --global user.name "Your name for commits"
+   git --global user.email "Your E-Mail for commits"
    ```
    **Final steps to graphic commit**
-   - Tippe eine commit Nachricht oben ein (diese wird in GitHub angezeigt)
-   - Drücke auf Changes [+] um alle Changes in Stages zu packen
-   - Drücke auf [Sync Changes 1]
+   Type a commit message above (this will be displayed in GitHub)
+   Press Changes [+] to pack all changes into stages
+   Press [Sync Changes 1]
    
-   - Fertig - Code wurde erfolgreich auf GitHub gepusht
+   Done :rocket: Code has been successfully pushed to GitHub
 
 2. **Clone this repository**:
-   - Under Windows go there you want the new Folder with the Code and there:
    > [!TIP]
    > Press (Shift+right Mouse) -> open Powershell Window here
-
+   > Under Windows go there you want the new Folder with the Code and there:
 
     ```bash
     git clone https://github.com/JanW42/AI_Project.git
@@ -154,13 +153,13 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 ## Usage
 
 1. **Prepare your PDFs**:  
-   - Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
+   Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
 
 2. **Run the application**:
    
 3. **Interact**:  
-   - Wait till Lucy talks.  
-   - Say your question. Wait 1 Seconds before talking to let the skricpt get all Data.  
+   Wait till Lucy talks.  
+   Say your question. Wait 1 Seconds before talking to let the skricpt get all Data.  
 
 ## Configuration
 > [!IMPORTANT]
@@ -184,6 +183,7 @@ class config:
 > Make sure **config.py** is referenced in your `.gitignore` so that it is not pushed to GitHub, keeping your keys safe.
 
 ```txt
+## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 config.py
 config.txt
 ```
