@@ -150,14 +150,14 @@ pip install nvidia-cublas-cu12==12.4.5.8
 ## Usage
 
 1. **Prepare your PDFs:**  
--Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
+- Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
 
 2. **Run the application:**
--Start normal with the play button or in terminal 'main.py'
+- Start normal with the play button or in terminal 'main.py'
    
 3. **Interact:**
--Wait till Lucy talks.  
--Say your question
+- Wait till Lucy talks.  
+- Say your question
 
 ## Configuration
 > [!IMPORTANT]
@@ -184,7 +184,7 @@ class config:
 ##Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 config.py
 config.txt
-VE/
+VE/  #change VE then using another venv name
 *.log
 *.wav
 *.mp3
@@ -199,10 +199,10 @@ Feel free to check the [issues page](../../issues) to see if your idea or bug re
 
 ## Acknowledgments
 
--[Speech_recognition](https://github.com/Uberi/speech_recognition) for providing a fast smart way to save audioinput into .wav files.  
--[faster_whisper](https://github.com/OpenNMT/CTranslate2/) for providing extremely powerful local speech to text.
--[AzureOpenAI](https://github.com/openai/openai-python/tree/main) for hosting GPT models.  
--[OpenWeather](https://github.com/openweathermap) for real-time weather data.  
--**You** for trying out this tool!
+- [Speech_recognition](https://github.com/Uberi/speech_recognition) for providing a fast smart way to save audioinput into .wav files.  
+- [faster_whisper](https://github.com/OpenNMT/CTranslate2/) for providing extremely powerful local speech to text.
+- [AzureOpenAI](https://github.com/openai/openai-python/tree/main) for hosting GPT models.  
+- [OpenWeather](https://github.com/openweathermap) for real-time weather data.  
+- **You** for trying out this tool!
 
 ---
