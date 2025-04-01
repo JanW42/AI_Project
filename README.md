@@ -58,6 +58,20 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 
 ## Installation
 1. **Configuriere git**:
+   - Installiere Python v.3.10.5 www.python.org
+   ```bash
+   python.exe -m pip install --upgrade pip
+   py --list
+   ```
+   - check Python Versions installt here should now be -V : 3.10 now
+ 
+
+   - Wenn es fehler beim Installieren von playsound gibt
+   ```bash
+   pip install --upgrade setuptools wheel
+   pip install playsound
+   ```
+
    - Installiere GitLens Extansion (Ctrl+Shift+X) - Tippe ein "GitLens"
    - Schließe geöffnete Dateien oder Ordner/Folder in VS Code (Ctrl+K F)
    - Erstelle einen leeren Ordner am Speicherort deiner Wahl
@@ -94,10 +108,10 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 
 
     ```bash
-    python -m venv ai         # "ai" is the Name of the virtual Environment
+    python -3.10 -m venv VE         # "VE" is the Name of the virtual Environment
     source ai/bin/activate    # for macOS / Linux
-    ai\Scripts\activate.bat   # for Windows using cmd
-    ai\Scripts\activate.ps1   # for Windows using PowerShell
+    VE\Scripts\activate.bat   # for Windows using cmd
+    VE\Scripts\activate.ps1   # for Windows using PowerShell
     ```
    - Now the VE is active, you see it as it is at the beginning at the code line and
    - at the bottom right is now {} Python 3.10.5('VE':venv)
