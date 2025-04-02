@@ -203,8 +203,10 @@ Feel free to check the [issues page](../../issues) to see if your idea or bug re
 
 ## Acknowledgments
 
-- [`Speech_recognition`](https://github.com/Uberi/speech_recognition) for providing a fast smart way to save audioinput into .wav files.  
-- [`faster_whisper`](https://github.com/OpenNMT/CTranslate2/) for providing extremely powerful local speech to text.
+- [`edge_tts`](https://github.com/rany2/edge-tts) for providing a emotional text to Voice.
+- [`speech_recognition`](https://github.com/Uberi/speech_recognition) for providing a fast smart way to save audioinput into .wav files.  
+- [`playsound`](https://github.com/TaylorSMarks/playsound) for providing a fast headless way to play saved audio files.
+- [`faster_whisper`](https://github.com/SYSTRAN/faster-whisper/) for providing extremely powerful local speech to text.
 - [`AzureOpenAI`](https://github.com/openai/openai-python/tree/main) for hosting GPT models.  
 - [`OpenWeather`](https://openweathermap.org) for real-time weather data.  
 - **You** for trying out this tool!
