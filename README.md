@@ -154,13 +154,13 @@ pip install nvidia-cublas-cu12==12.4.5.8
 ## Usage
 
 1. **Prepare your PDFs:**  
-   - Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
+   - Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`)
 
 2. **Run the application:**
    - Start normal with the play button or in terminal 'main.py'
    
 3. **Interact:**
-   - Wait till Lucy talks.  
+   - Wait till Lucy talks  
    - Say your question
 
 ## Configuration
