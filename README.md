@@ -45,13 +45,15 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 
 ### File Details
 
-- 'main.py ' 
+- `main.py`
   
-- 'audio_recorder.py'  
+- `audio_recorder.py`
 
-- 'speech_to_text.py' 
+- `speech_to_text.py`
 
-- 'staudioindex.py'
+- `functions.py`
+
+- `staudioindex.py`
 
 - 'config.py'
 > [!CAUTION]
@@ -201,10 +203,10 @@ Feel free to check the [issues page](../../issues) to see if your idea or bug re
 
 ## Acknowledgments
 
-- [Speech_recognition](https://github.com/Uberi/speech_recognition) for providing a fast smart way to save audioinput into .wav files.  
-- [faster_whisper](https://github.com/OpenNMT/CTranslate2/) for providing extremely powerful local speech to text.
-- [AzureOpenAI](https://github.com/openai/openai-python/tree/main) for hosting GPT models.  
-- [OpenWeather](https://openweathermap.org) for real-time weather data.  
+- [`Speech_recognition`](https://github.com/Uberi/speech_recognition) for providing a fast smart way to save audioinput into .wav files.  
+- [`faster_whisper`](https://github.com/OpenNMT/CTranslate2/) for providing extremely powerful local speech to text.
+- [`AzureOpenAI`](https://github.com/openai/openai-python/tree/main) for hosting GPT models.  
+- [`OpenWeather`](https://openweathermap.org) for real-time weather data.  
 - **You** for trying out this tool!
 
 ---
