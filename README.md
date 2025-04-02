@@ -8,6 +8,8 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 - [Overview](#overview)
 - [Features](#features)
 - [Project Structure](#project-structure)
+- [File Details](#file-details)
+- [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
@@ -51,11 +53,9 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 
 - `speech_to_text.py`
 
-- `functions.py`
-
 - `staudioindex.py`
 
-- 'config.py'
+- `config.py`
 > [!CAUTION]
 > A file that contains environment variables such as API keys and endpoints.  
 > Not tracked by Git for security (make sure your `.gitignore` is set correctly).
@@ -154,14 +154,14 @@ pip install nvidia-cublas-cu12==12.4.5.8
 ## Usage
 
 1. **Prepare your PDFs:**  
-- Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
+   - Place any relevant PDF documents in the `data` folder (or whichever folder you specify in `retriever.py`).
 
 2. **Run the application:**
-- Start normal with the play button or in terminal 'main.py'
+   - Start normal with the play button or in terminal 'main.py'
    
 3. **Interact:**
-- Wait till Lucy talks.  
-- Say your question
+   - Wait till Lucy talks.  
+   - Say your question
 
 ## Configuration
 > [!IMPORTANT]
