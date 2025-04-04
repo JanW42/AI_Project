@@ -170,6 +170,8 @@ pip install nvidia-cublas-cu12==12.4.5.8
 ```python
 from dataclasses import dataclass
 
+#Why do we use the built-in data class? They are robust and thread-safe. Still important for later app
+
 @dataclass
 class config:
    # Azure OpenAI
