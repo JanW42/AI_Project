@@ -4,6 +4,8 @@
 
 AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and Artificial Intelligence
 
+!!! Documentation may not be up to date due to constant changes
+
 ## Structure
 - [Overview](#overview)
 - [Features](#features)
