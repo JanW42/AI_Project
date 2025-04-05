@@ -31,8 +31,6 @@ def set_cuda_paths():
 #pip install nvidia-cublas-cu12==12.4.5.8
 
 def speech_to_text_processer():
-    ic()
-    print("Sprache zu Text starten")
     model_size = settings.model_size
 
     # Run on GPU with FP16
@@ -49,8 +47,6 @@ def speech_to_text_processer():
 
     for segment in segments:
         print("[%.2fs -> %.2fs] %s" % (segment.start, segment.end, segment.text))
-    ic()
-    print("Sprache zu Text fertig")
     return segment.text
 
 def Speech_to_Text_Parser():
