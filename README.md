@@ -1,10 +1,10 @@
-![CI](https://pypi-camo.freetls.fastly.net/186d79cdee29d06b107a999e2d8c8611121e160f/68747470733a2f2f6769746875622e636f6d2f5359535452414e2f6661737465722d776869737065722f776f726b666c6f77732f43492f62616467652e737667)![Status](https://pypi-camo.freetls.fastly.net/5d2da640fa2fb42f1cab6f8bf77084d0e539d17f/68747470733a2f2f696d672e736869656c64732e696f2f707970692f7374617475732f5370656563685265636f676e6974696f6e2e737667)
+[![Tests](https://pypi-camo.freetls.fastly.net/bdbd035da2ab4288a104e1bea66187e52fa0c51b/68747470733a2f2f6769746875622e636f6d2f6d6174706c6f746c69622f6d6174706c6f746c69622f776f726b666c6f77732f54657374732f62616467652e737667)](https://github.com/JanW42/AI_Project/pulls)
+[![Status](https://pypi-camo.freetls.fastly.net/5d2da640fa2fb42f1cab6f8bf77084d0e539d17f/68747470733a2f2f696d672e736869656c64732e696f2f707970692f7374617475732f5370656563685265636f676e6974696f6e2e737667)](https://github.com/JanW42/AI_Project/issues)
+[![GitHub Issues](https://pypi-camo.freetls.fastly.net/52bea5a66ac819c8d1c22a8ef9f2075d7b153a03/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f69737375655f747261636b696e672d6769746875622d626c75652e737667)](https://github.com/JanW42/AI_Project/issues)
 
 # AI_Project
 
 AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and Artificial Intelligence
-
-!!! Documentation may not be up to date due to constant changes
 
 ## Structure
 - [Overview](#overview)
@@ -118,6 +118,8 @@ cd AI_Project
 
 ```bash
 python -3.10 -m venv VE   #"VE" is the name of the virtual Environment
+or
+py -3.10 -m venv VE
 source ai/bin/activate    # for macOS / Linux
 VE\Scripts\activate.bat   # for Windows using cmd
 VE\Scripts\activate.ps1   # for Windows using PowerShell
