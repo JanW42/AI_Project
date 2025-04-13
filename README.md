@@ -4,7 +4,7 @@
 
 # AI_Project
 
-AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and Artificial Intelligence
+AI Voice Assistant Alessa. Project at the FH Münster with Dr. Rasch in Prescriptive Analytics and Artificial Intelligence
 
 ## Structure
 - [Overview](#overview)
@@ -21,30 +21,33 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 
 ## Overview
 
-**AI_Project** is a AI Voice assistent designed to answer questions:
-1. It retrieves relevant chunks of text from local PDF documents.
+**AI_Project** is a AI Voice Assistent designed to answer questions:
+1. It will retrieves relevant chunks of text from local PDF documents.
 2. It calls Azure OpenAI to generate context-aware responses.
-3. It fetches real-time weather information via the OpenWeather API.
-4. It displays everything in a App.
+3. It will fetches real-time weather information via the OpenWeather API.
+4. It will displays everything in a Real-Time WebApp.
 
 ## Features
 
-- **AI Voice Assistent**: An AI with emotional german voice to complete tasks and access to gpt4o API.
-- **Local PDF Retriever**: Uses chunk-based embedding retrieval to provide context for your questions.
+- **AI Voice Assistent**: An AI with emotional german voice to answer questions using gpt4o Openai API.
+- **Local PDF Retriever**: Will use chunk-based embedding retrieval to provide context for your questions.
 - **Azure OpenAI Integration**: Generates answers using GPT models hosted on Azure OpenAI.
-- **OpenWeather API**: Retrieves up-to-date weather information for a given location.
-- **Customizable Prompt Template**: You can define your own prompt structure in a simple text file.
+- **OpenWeather API**: Will retrieves up-to-date weather information for a given location.
 
 ## Project Structure
 
 ```plaintext
-├── main.py               # AI Assistant using Opanai API
-├── audio_recorder.py     # Script that provides all functions for audio recording and storage for further processing
-├── speech_to_text.py     # The script that provides all language functions for text conversion. Built on faster_whisper. An extremely powerful stt CUDA GPU usage
-├── testaudioindex.py     # A test script to find out the audio interface index to start real-time voice input
-├── requirements.txt      # Python dependencies
-├── config.py             # Holds environment variables (.gitignore)
-└── README.md             # Documentation (this file)
+├── main.py                 # AI Assistant using Opanai API
+├── performance_tracking.py # Contains a function to which all functions are passed so that the runtime can be measured within a method
+├── audio_recorder.py       # Script that provides all functions for audio recording and storage for further processing
+├── speech_to_text.py       # The script that provides all language functions for text conversion. Built on faster_whisper. An extremely powerful stt CUDA GPU usage
+├── text_to_speech.py       # Script that provides all functions for text to speech process
+├── functions.py            # Script that will take all Agend functions
+├── testaudioindex.py       # A test script to find out the audio interface index to start real-time voice input
+├── settings.py             # Script that contains all variables to set them without much effort
+├── requirements.txt        # Python dependencies
+├── config.py               # Holds environment variables (.gitignore)
+└── README.md               # Documentation (this file)
 ```
 
 ### File Details
@@ -153,7 +156,7 @@ pip install nvidia-cuda-nvrtc-cu12==12.4.127
 pip install nvidia-cuda-runtime-cu12==12.4.127
 pip install nvidia-cublas-cu12==12.4.5.8
 ```
-5. **Set up your environment variables** in `config.txt` (see [Configuration](#configuration)).
+5. **Set up your environment variables** in `config.py` (see [Configuration](#configuration)).
 
 ## Usage
 
@@ -164,8 +167,8 @@ pip install nvidia-cublas-cu12==12.4.5.8
    - Start normal with the play button or in terminal 'main.py'
    
 3. **Interact:**
-   - Wait till Lucy talks  
-   - Say your question
+   - Wait till Alessa talks  
+   - Ask your question
 
 ## Configuration
 > [!IMPORTANT]
@@ -194,7 +197,7 @@ class config:
 ##Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 config.py
 config.txt
-VE/  #change VE then using another venv name
+VE/  #change VE when using another venv name
 *.log
 *.wav
 *.mp3
