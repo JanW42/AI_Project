@@ -1,10 +1,10 @@
-![CI](https://pypi-camo.freetls.fastly.net/186d79cdee29d06b107a999e2d8c8611121e160f/68747470733a2f2f6769746875622e636f6d2f5359535452414e2f6661737465722d776869737065722f776f726b666c6f77732f43492f62616467652e737667)![Status](https://pypi-camo.freetls.fastly.net/5d2da640fa2fb42f1cab6f8bf77084d0e539d17f/68747470733a2f2f696d672e736869656c64732e696f2f707970692f7374617475732f5370656563685265636f676e6974696f6e2e737667)
+[![Tests](https://pypi-camo.freetls.fastly.net/bdbd035da2ab4288a104e1bea66187e52fa0c51b/68747470733a2f2f6769746875622e636f6d2f6d6174706c6f746c69622f6d6174706c6f746c69622f776f726b666c6f77732f54657374732f62616467652e737667)](https://github.com/JanW42/AI_Project/pulls)
+[![Status](https://pypi-camo.freetls.fastly.net/5d2da640fa2fb42f1cab6f8bf77084d0e539d17f/68747470733a2f2f696d672e736869656c64732e696f2f707970692f7374617475732f5370656563685265636f676e6974696f6e2e737667)](https://github.com/JanW42/AI_Project/issues)
+[![GitHub Issues](https://pypi-camo.freetls.fastly.net/52bea5a66ac819c8d1c22a8ef9f2075d7b153a03/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f69737375655f747261636b696e672d6769746875622d626c75652e737667)](https://github.com/JanW42/AI_Project/issues)
 
 # AI_Project
 
-AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and Artificial Intelligence
-
-!!! Documentation may not be up to date due to constant changes
+AI Voice Assistant Alessa. Project at the FH Münster with Dr. Rasch in Prescriptive Analytics and Artificial Intelligence
 
 ## Structure
 - [Overview](#overview)
@@ -21,30 +21,33 @@ AI voice assistant Lucy. Project at Dr. Rasch in EM Prescriptive Analytics and A
 
 ## Overview
 
-**AI_Project** is a AI Voice assistent designed to answer questions:
-1. It retrieves relevant chunks of text from local PDF documents.
+**AI_Project** is a AI Voice Assistent designed to answer questions:
+1. It will retrieves relevant chunks of text from local PDF documents.
 2. It calls Azure OpenAI to generate context-aware responses.
-3. It fetches real-time weather information via the OpenWeather API.
-4. It displays everything in a App.
+3. It will fetches real-time weather information via the OpenWeather API.
+4. It will displays everything in a Real-Time WebApp.
 
 ## Features
 
-- **AI Voice Assistent**: An AI with emotional german voice to complete tasks and access to gpt4o API.
-- **Local PDF Retriever**: Uses chunk-based embedding retrieval to provide context for your questions.
+- **AI Voice Assistent**: An AI with emotional german voice to answer questions using gpt4o Openai API.
+- **Local PDF Retriever**: Will use chunk-based embedding retrieval to provide context for your questions.
 - **Azure OpenAI Integration**: Generates answers using GPT models hosted on Azure OpenAI.
-- **OpenWeather API**: Retrieves up-to-date weather information for a given location.
-- **Customizable Prompt Template**: You can define your own prompt structure in a simple text file.
+- **OpenWeather API**: Will retrieves up-to-date weather information for a given location.
 
 ## Project Structure
 
 ```plaintext
-├── main.py               # AI Assistant using Opanai API
-├── audio_recorder.py     # Script that provides all functions for audio recording and storage for further processing
-├── speech_to_text.py     # The script that provides all language functions for text conversion. Built on faster_whisper. An extremely powerful stt CUDA GPU usage
-├── testaudioindex.py     # A test script to find out the audio interface index to start real-time voice input
-├── requirements.txt      # Python dependencies
-├── config.py             # Holds environment variables (.gitignore)
-└── README.md             # Documentation (this file)
+├── main.py                 # AI Assistant using Opanai API
+├── performance_tracking.py # Contains a function to which all functions are passed so that the runtime can be measured within a method
+├── audio_recorder.py       # Script that provides all functions for audio recording and storage for further processing
+├── speech_to_text.py       # The script that provides all language functions for text conversion. Built on faster_whisper. An extremely powerful stt CUDA GPU usage
+├── text_to_speech.py       # Script that provides all functions for text to speech process
+├── functions.py            # Script that will take all Agend functions
+├── testaudioindex.py       # A test script to find out the audio interface index to start real-time voice input
+├── settings.py             # Script that contains all variables to set them without much effort
+├── requirements.txt        # Python dependencies
+├── config.py               # Holds environment variables (.gitignore)
+└── README.md               # Documentation (this file)
 ```
 
 ### File Details
@@ -118,7 +121,9 @@ cd AI_Project
 
 ```bash
 python -3.10 -m venv VE   #"VE" is the name of the virtual Environment
-source ai/bin/activate    # for macOS / Linux
+or
+py -3.10 -m venv VE
+source VE/bin/activate    # for macOS / Linux
 VE\Scripts\activate.bat   # for Windows using cmd
 VE\Scripts\activate.ps1   # for Windows using PowerShell
 ```
@@ -151,7 +156,7 @@ pip install nvidia-cuda-nvrtc-cu12==12.4.127
 pip install nvidia-cuda-runtime-cu12==12.4.127
 pip install nvidia-cublas-cu12==12.4.5.8
 ```
-5. **Set up your environment variables** in `config.txt` (see [Configuration](#configuration)).
+5. **Set up your environment variables** in `config.py` (see [Configuration](#configuration)).
 
 ## Usage
 
@@ -162,8 +167,8 @@ pip install nvidia-cublas-cu12==12.4.5.8
    - Start normal with the play button or in terminal 'main.py'
    
 3. **Interact:**
-   - Wait till Lucy talks  
-   - Say your question
+   - Wait till Alessa talks  
+   - Ask your question
 
 ## Configuration
 > [!IMPORTANT]
@@ -192,7 +197,7 @@ class config:
 ##Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 config.py
 config.txt
-VE/  #change VE then using another venv name
+VE/  #change VE when using another venv name
 *.log
 *.wav
 *.mp3
