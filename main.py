@@ -55,7 +55,7 @@ def create_message(prompt):
 
 if __name__ == "__main__":
     time_function(initial_path)
-    asyncio.run(text_to_mp3(settings.welcometext, settings.filename, settings.voice, settings.rate))
+    asyncio.run(text_to_mp3(settings.welcometext, settings.filename, settings.voice, settings.rate, settings.pitch))
     try:
         time_function(playsound, settings.filename)
         time_function(os.remove, settings.filename)
@@ -72,7 +72,7 @@ if __name__ == "__main__":
             time_function(record_and_save) #Hier wird die Funktion record and save aufgerufen um die Mikrosprache solange auszunehmen bis man aufhört zu reden. Dann wird es in der Input.wav Datei gespeichert.
             text = time_function(Speech_to_Text_Parser) #Hier wird die Sprache aus input.mp3 in Text verarbeitet mit der extrem Leistungsstarken lokalen CUDA anwendung von OpenAI / Nvidia
             result = time_function(create_message, text)  #Rufe die Funktion auf und übergebe die "Frage" zu ChatGpt API
-            asyncio.run(text_to_mp3(result, settings.filename, settings.voice, settings.rate))
+            asyncio.run(text_to_mp3(result, settings.filename, settings.voice, settings.rate, settings.pitch))
             try:
                 time_function(playsound, settings.filename) # Den im neuem Thread starten um dazwischen zu sprechen
                 time_function(os.remove, settings.filename)
