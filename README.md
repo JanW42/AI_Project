@@ -120,7 +120,7 @@ cd AI_Project
 > Open a new Terminal with (Ctrl+Shift+ö)de.
 
 ```bash
-python -3.10 -m venv VE   #"VE" is the name of the virtual Environment
+python -3.10 -m venv VE   # "VE" is the name of the virtual Environment
 or
 py -3.10 -m venv VE
 source VE/bin/activate    # for macOS / Linux
@@ -156,7 +156,7 @@ pip install nvidia-cuda-nvrtc-cu12==12.4.127
 pip install nvidia-cuda-runtime-cu12==12.4.127
 pip install nvidia-cublas-cu12==12.4.5.8
 ```
-5. **Set up your environment variables** in `config.py` (see [Configuration](#configuration)).
+**5. Set up your environment variables** in `config.py` (see [Configuration](#configuration)).
 
 ## Usage
 
