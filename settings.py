@@ -31,7 +31,7 @@ class settings:
     }
  
     ## faster_whisper speech_to_text
-    model_size = "large-v3"
+    model_size = "medium"  #large-v3 #medium
     # Run on GPU with FP16
     device="cuda"
     compute_type="float16"
