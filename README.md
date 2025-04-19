@@ -32,7 +32,8 @@ AI Voice Assistant Alessa. Project at the FH Münster with Dr. Rasch in Prescrip
 - **AI Voice Assistent**: An AI with emotional german voice to answer questions using gpt4o Openai API.
 - **Local PDF Retriever**: Will use chunk-based embedding retrieval to provide context for your questions.
 - **Azure OpenAI Integration**: Generates answers using GPT models hosted on Azure OpenAI.
-- **OpenWeather API**: Will retrieves up-to-date weather information for a given location.
+- **OpenWeather API**: Retrieves up-to-date weather information for a given location.
+- **Datetime now**: Tells you the current time.
 
 ## Project Structure
 
