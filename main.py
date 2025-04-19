@@ -1,11 +1,9 @@
-import os
-import time
-import asyncio
+import os, asyncio
 from config import config #Lokal eigene Lib
 from settings import settings #Lokal eigene Lib
 from openai import AzureOpenAI #pip install openai
 from playsound import playsound #pip install playsound==1.2.2
-from audio_recorder import record_and_save, get_ambient_noise #Lokal eigene Lib
+from hotword_call_and_action import record_and_save, get_ambient_noise, hotword_call_and_action #Lokal eigene Lib
 from speech_to_text import Speech_to_Text_Parser, set_cuda_paths #Lokal eigene Lib
 from text_to_speech import remove_asterisks, text_to_mp3
 from icecream import ic
@@ -22,7 +20,7 @@ def initial_path():
 def create_message(prompt):
     model = settings.model   #definiere Model von ChatGpt
 
-    #Nachfolgende OpenAIModel und if Funktion Optional
+    # Nachfolgende OpenAIModel und if Funktion Optional
     OpenAIModels = settings.OpenAIModels
     
     if model not in OpenAIModels:
@@ -40,16 +38,15 @@ def create_message(prompt):
         azure_deployment=selected_deployment
     )
 
-    #Erstelle eine Nachricht die im passenend Format für ChatGpt API. Packe den prompt herein
+    # Erstelle eine Nachricht die im passenend Format für ChatGpt API. Packe den prompt herein
     messages = [
         {"role": "user", "content": prompt}
     ]
 
-    #Frage nach bei der API. Sende dafür die Nachricht mit dem GPT Model was zur Antwort benutzt werden soll.
+    # Frage nach bei der API. Sende dafür die Nachricht mit dem GPT Model was zur Antwort benutzt werden soll.
     response = client.chat.completions.create(messages=messages, model=model)
     response_content = response.choices[0].message.content
     response_without_asterisks = remove_asterisks(response_content) #Sonderzeichen die im GPT Output stehen entfernen für bessere Sprachausgabe
-    print (response_without_asterisks)
     return response_without_asterisks
 
 
@@ -65,16 +62,20 @@ if __name__ == "__main__":
         print ("Das Programm wurde beendet")
 
     time_function(set_cuda_paths)# Setzte einmal den CUDA Pfad
-    time_function(get_ambient_noise)# Erfasse Hintergrundrauschen
+    #time_function(get_ambient_noise)# Erfasse Hintergrundrauschen
 
     while True:
         try:
-            time_function(record_and_save) #Hier wird die Funktion record and save aufgerufen um die Mikrosprache solange auszunehmen bis man aufhört zu reden. Dann wird es in der Input.wav Datei gespeichert.
-            text = time_function(Speech_to_Text_Parser) #Hier wird die Sprache aus input.mp3 in Text verarbeitet mit der extrem Leistungsstarken lokalen CUDA anwendung von OpenAI / Nvidia
+            status, text = hotword_call_and_action()
+            #time_function(record_and_save) #Hier wird die Funktion record and save aufgerufen um die Mikrosprache solange auszunehmen bis man aufhört zu reden. Dann wird es in der Input.wav Datei gespeichert.
+            #text = time_function(Speech_to_Text_Parser) #Hier wird die Sprache aus input.mp3 in Text verarbeitet mit der extrem Leistungsstarken lokalen CUDA anwendung von OpenAI / Nvidia
+            if status:
+                time_function(playsound, "tmp77bgpy50.mp3")
+                break
             result = time_function(create_message, text)  #Rufe die Funktion auf und übergebe die "Frage" zu ChatGpt API
             asyncio.run(text_to_mp3(result, settings.filename, settings.voice, settings.rate, settings.pitch))
             try:
-                time_function(playsound, settings.filename) # Den im neuem Thread starten um dazwischen zu sprechen
+                time_function(playsound, settings.filename)
                 time_function(os.remove, settings.filename)
 
             except (RuntimeError, TypeError, ValueError) as e:
