@@ -37,17 +37,16 @@ AI Voice Assistant Alessa. Project at the FH Münster with Dr. Rasch in Prescrip
 ## Project Structure
 
 ```plaintext
-├── main.py                 # AI Assistant using Opanai API
-├── performance_tracking.py # Contains a function to which all functions are passed so that the runtime can be measured within a method
-├── audio_recorder.py       # Script that provides all functions for audio recording and storage for further processing
-├── speech_to_text.py       # The script that provides all language functions for text conversion. Built on faster_whisper. An extremely powerful stt CUDA GPU usage
-├── text_to_speech.py       # Script that provides all functions for text to speech process
-├── functions.py            # Script that will take all Agend functions
-├── testaudioindex.py       # A test script to find out the audio interface index to start real-time voice input
-├── settings.py             # Script that contains all variables to set them without much effort
-├── requirements.txt        # Python dependencies
-├── config.py               # Holds environment variables (.gitignore)
-└── README.md               # Documentation (this file)
+├── main.py                      # AI Assistant using Opanai API
+├── performance_tracking.py      # Contains a function to which all functions are passed so that the runtime can be measured within a method
+├── hotword_call_and_action.py   # Script that provides all functions for audio recording and storage for further processing
+├── speech_to_text.py            # The script that provides all language functions for text conversion. Built on faster_whisper. An extremely powerful stt CUDA GPU usage
+├── text_to_speech.py            # Script that provides all functions for text to speech process
+├── testaudioindex.py            # A test script to find out the audio interface index to start real-time voice input
+├── settings.py                  # Script that contains all variables to set them without much effort
+├── requirements.txt             # Python dependencies
+├── config.py                    # Holds environment variables (.gitignore)
+└── README.md                    # Documentation (this file)
 ```
 
 ### File Details
